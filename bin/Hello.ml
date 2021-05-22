@@ -1,6 +1,13 @@
 open Migrate_parsetree
+open Sexplib.Std
+open Typedtree
 
-type typed_code = Typedtree.structure
+type foo = int * int
+[@@deriving sexp_of]
+
+type x = (Typedtree.structure_item_desc)
+
+type typed_code = structure
 
 type typed_signature = Typedtree.signature
 
@@ -26,15 +33,7 @@ let env =
   Compmisc.init_path ();
   Compmisc.initial_env ()
 
-let typed_code =
+let (typed_code, module_coercion) =
   Typemod.type_implementation "Tuturu.ml" "Tuturu" "Tuturu" env code
 
-let program = Translmod.transl_implementation "Tuturu" typed_code
-
-let () = Format.printf "%a" Printtyped.implementation_with_coercion typed_code
-
-let () = Format.printf "%a" Printlambda.program program
-
-(* -int -float +string *)
-(* (a : b (c : d b))' *)
-(* (a (c b)) *)
+let () = Format.printf "%a" Printtyped.implementation_with_coercion (typed_code, module_coercion)

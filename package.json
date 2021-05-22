@@ -15,7 +15,8 @@
       ]
     },
     "buildEnv": {
-      "ODOC_SYNTAX": "re"
+      "ODOC_SYNTAX": "re",
+      "OCAMLPARAM":"_,w=-27-26-32-33-20"
     }
   },
   "scripts": {
@@ -26,7 +27,10 @@
   "dependencies": {
     "@opam/dune": "^2.7.1",
     "ocaml": "~4.11.0",
-    "@opam/ppx_tools_versioned": "*"
+    "@opam/ppx_tools_versioned": "*",
+    "@opam/ppx_sexp_conv": "*",
+    "@opam/sexplib": "*",
+    "@opam/ppx_deriving_yojson": "*"
   },
   "devDependencies": {
     "@opam/earlybird": "*",
