@@ -30,7 +30,9 @@
     "@opam/ppx_tools_versioned": "*",
     "@opam/ppx_sexp_conv": "*",
     "@opam/sexplib": "*",
-    "@opam/ppx_deriving_yojson": "*"
+    "@opam/ppx_deriving_yojson": "*",
+    "@opam/ppx_deriving": "*",
+    "@opam/ppx_import": "*"
   },
   "devDependencies": {
     "@opam/earlybird": "*",

@@ -1,5 +1,5 @@
 {
-  "checksum": "24028162406c5aad716dcfdc919b3df8",
+  "checksum": "b3e4c9070fd9662b6deeb879539e0064",
   "root": "hello-reason@link-dev:./package.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#db3a0b63883606dd57c54a7158d560d6cba8cd79@d41d8cd9": {
@@ -46,7 +46,9 @@
         "ocaml@4.11.2000@d41d8cd9", "@opam/sexplib@opam:v0.14.0@f67f18de",
         "@opam/ppx_tools_versioned@opam:5.4.0@4ab57069",
         "@opam/ppx_sexp_conv@opam:v0.14.1@5fc4da3c",
+        "@opam/ppx_import@opam:1.8.0@ca918451",
         "@opam/ppx_deriving_yojson@opam:3.6.1@faf11a7c",
+        "@opam/ppx_deriving@opam:5.1@e3402845",
         "@opam/dune@opam:2.8.5@83fb0224"
       ],
       "devDependencies": [
@@ -54,7 +56,7 @@
         "@opam/ocamlformat@opam:0.15.0@8e036963",
         "@opam/ocaml-lsp-server@opam:1.4.1@cd85c376",
         "@opam/merlin@opam:4.2-411@844e0614",
-        "@opam/earlybird@opam:1.0.3@b5ff1819"
+        "@opam/earlybird@opam:1.1.0@4bff968a"
       ]
     },
     "@opam/yojson@opam:1.7.0@7056d985": {
@@ -712,6 +714,36 @@
         "@opam/dune@opam:2.8.5@83fb0224", "@opam/base@opam:v0.14.1@d14008e2"
       ]
     },
+    "@opam/ppx_import@opam:1.8.0@ca918451": {
+      "id": "@opam/ppx_import@opam:1.8.0@ca918451",
+      "name": "@opam/ppx_import",
+      "version": "opam:1.8.0",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/sha256/fb/fb0d4627125379561a9031616f58df242dd885c6e34bc32499915cefc1910c7f#sha256:fb0d4627125379561a9031616f58df242dd885c6e34bc32499915cefc1910c7f",
+          "archive:https://github.com/ocaml-ppx/ppx_import/releases/download/v1.8.0/ppx_import-1.8.0.tbz#sha256:fb0d4627125379561a9031616f58df242dd885c6e34bc32499915cefc1910c7f"
+        ],
+        "opam": {
+          "name": "ppx_import",
+          "version": "1.8.0",
+          "path": "esy.lock/opam/ppx_import.1.8.0"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.11.2000@d41d8cd9",
+        "@opam/ppx_tools_versioned@opam:5.4.0@4ab57069",
+        "@opam/ocaml-migrate-parsetree@opam:1.8.0@caf9847c",
+        "@opam/dune@opam:2.8.5@83fb0224", "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.11.2000@d41d8cd9",
+        "@opam/ppx_tools_versioned@opam:5.4.0@4ab57069",
+        "@opam/ocaml-migrate-parsetree@opam:1.8.0@caf9847c",
+        "@opam/dune@opam:2.8.5@83fb0224"
+      ]
+    },
     "@opam/ppx_here@opam:v0.14.0@5ccc1c01": {
       "id": "@opam/ppx_here@opam:v0.14.0@5ccc1c01",
       "name": "@opam/ppx_here",
@@ -1212,7 +1244,7 @@
         "@opam/ocaml-migrate-parsetree@opam:1.8.0@caf9847c",
         "@opam/menhir@opam:20210419@11c42419",
         "@opam/fpath@opam:0.7.3@674d8125",
-        "@opam/fix@opam:20200131@c08126a4", "@opam/dune@opam:2.8.5@83fb0224",
+        "@opam/fix@opam:20201120@0b212fb9", "@opam/dune@opam:2.8.5@83fb0224",
         "@opam/cmdliner@opam:1.0.4@93208aac",
         "@opam/base-unix@opam:base@87d0b2eb",
         "@opam/base@opam:v0.14.1@d14008e2",
@@ -1226,7 +1258,7 @@
         "@opam/ocaml-migrate-parsetree@opam:1.8.0@caf9847c",
         "@opam/menhir@opam:20210419@11c42419",
         "@opam/fpath@opam:0.7.3@674d8125",
-        "@opam/fix@opam:20200131@c08126a4", "@opam/dune@opam:2.8.5@83fb0224",
+        "@opam/fix@opam:20201120@0b212fb9", "@opam/dune@opam:2.8.5@83fb0224",
         "@opam/cmdliner@opam:1.0.4@93208aac",
         "@opam/base-unix@opam:base@87d0b2eb",
         "@opam/base@opam:v0.14.1@d14008e2"
@@ -1863,20 +1895,20 @@
         "@opam/seq@opam:base@d8d7de1d"
       ]
     },
-    "@opam/fix@opam:20200131@c08126a4": {
-      "id": "@opam/fix@opam:20200131@c08126a4",
+    "@opam/fix@opam:20201120@0b212fb9": {
+      "id": "@opam/fix@opam:20201120@0b212fb9",
       "name": "@opam/fix",
-      "version": "opam:20200131",
+      "version": "opam:20201120",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://opam.ocaml.org/cache/md5/99/991ff031666c662eaab638d2e0f4ac1d#md5:991ff031666c662eaab638d2e0f4ac1d",
-          "archive:https://gitlab.inria.fr/fpottier/fix/-/archive/20200131/archive.tar.gz#md5:991ff031666c662eaab638d2e0f4ac1d"
+          "archive:https://opam.ocaml.org/cache/md5/7e/7eb570b759635fe66f3556d2b1cc88e3#md5:7eb570b759635fe66f3556d2b1cc88e3",
+          "archive:https://gitlab.inria.fr/fpottier/fix/-/archive/20201120/archive.tar.gz#md5:7eb570b759635fe66f3556d2b1cc88e3"
         ],
         "opam": {
           "name": "fix",
-          "version": "20200131",
-          "path": "esy.lock/opam/fix.20200131"
+          "version": "20201120",
+          "path": "esy.lock/opam/fix.20201120"
         }
       },
       "overrides": [],
@@ -1913,20 +1945,20 @@
         "ocaml@4.11.2000@d41d8cd9", "@opam/dune@opam:2.8.5@83fb0224"
       ]
     },
-    "@opam/earlybird@opam:1.0.3@b5ff1819": {
-      "id": "@opam/earlybird@opam:1.0.3@b5ff1819",
+    "@opam/earlybird@opam:1.1.0@4bff968a": {
+      "id": "@opam/earlybird@opam:1.1.0@4bff968a",
       "name": "@opam/earlybird",
-      "version": "opam:1.0.3",
+      "version": "opam:1.1.0",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://opam.ocaml.org/cache/sha256/f1/f1a4de803d308eb2cb61bf9f8b0b77211d7526edd4a10753fc11dc3be754795f#sha256:f1a4de803d308eb2cb61bf9f8b0b77211d7526edd4a10753fc11dc3be754795f",
-          "archive:https://github.com/hackwaly/ocamlearlybird/releases/download/1.0.3/earlybird-1.0.3.tbz#sha256:f1a4de803d308eb2cb61bf9f8b0b77211d7526edd4a10753fc11dc3be754795f"
+          "archive:https://opam.ocaml.org/cache/sha256/aa/aae7257fa73a502ea808eb5c3f3bf9fa0218cedf43342289ca44f03b32839fdf#sha256:aae7257fa73a502ea808eb5c3f3bf9fa0218cedf43342289ca44f03b32839fdf",
+          "archive:https://github.com/hackwaly/ocamlearlybird/releases/download/1.1.0/earlybird-1.1.0.tbz#sha256:aae7257fa73a502ea808eb5c3f3bf9fa0218cedf43342289ca44f03b32839fdf"
         ],
         "opam": {
           "name": "earlybird",
-          "version": "1.0.3",
-          "path": "esy.lock/opam/earlybird.1.0.3"
+          "version": "1.1.0",
+          "path": "esy.lock/opam/earlybird.1.1.0"
         }
       },
       "overrides": [],
@@ -1935,6 +1967,7 @@
         "@opam/ppx_deriving_yojson@opam:3.6.1@faf11a7c",
         "@opam/ppx_deriving@opam:5.1@e3402845",
         "@opam/path_glob@opam:0.2@e298ab39",
+        "@opam/ocaml-compiler-libs@opam:v0.12.3@f0f069bd",
         "@opam/menhirLib@opam:20210419@0b3db8d0",
         "@opam/menhir@opam:20210419@11c42419",
         "@opam/lwt_react@opam:1.1.4@7d2054d1",
@@ -1951,6 +1984,7 @@
         "@opam/ppx_deriving_yojson@opam:3.6.1@faf11a7c",
         "@opam/ppx_deriving@opam:5.1@e3402845",
         "@opam/path_glob@opam:0.2@e298ab39",
+        "@opam/ocaml-compiler-libs@opam:v0.12.3@f0f069bd",
         "@opam/menhirLib@opam:20210419@0b3db8d0",
         "@opam/lwt_react@opam:1.1.4@7d2054d1",
         "@opam/lwt_ppx@opam:2.0.1@edf5ad68", "@opam/lwt@opam:5.4.0@1ec6dbfd",

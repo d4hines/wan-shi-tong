@@ -21,8 +21,6 @@
 
 *)
 
-open Asttypes
-
 (* Value expressions for the core language *)
 
 type partial = Partial | Total
