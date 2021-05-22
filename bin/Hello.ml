@@ -1,8 +1,7 @@
 open My_typedtree
 open Sexplib.Std
 
-type foo = int * int
-[@@deriving sexp_of]
+type foo = int * int [@@deriving sexp_of]
 
 (* type x = (Typedtree.structure_item_desc) *)
 
